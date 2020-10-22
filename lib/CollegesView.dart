@@ -1,3 +1,4 @@
+import 'package:brain/AppBar.dart';
 import 'package:brain/CollgeDetailView.dart';
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -23,42 +24,11 @@ class CollegesList extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(20),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Image(
-                  image: AssetImage("assets/images/logo.png"),
-                  height: 60,
-                  width: 60,
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      "Brain",
-                      style: TextStyle(
-                          fontFamily: "ProductSans-Bold",
-                          fontSize: 22,
-                          color: PrimaryDarkColor),
-                    ),
-                    Text(
-                      "Search best colleges in your area",
-                      style: TextStyle(
-                          fontFamily: "ProductSans-Regular",
-                          fontSize: 12,
-                          color: PrimaryDarkColor),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
+          CustomAppBar(
+              context: context,
+              MainTitle: "Brain",
+              SubTitle: "Educate to Elevate",
+              ShowClickIcon: false),
           CarouselSlider(
               items: [1, 2, 3, 4, 5].map((i) {
                 return Builder(

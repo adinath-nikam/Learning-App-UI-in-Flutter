@@ -1,3 +1,4 @@
+import 'package:brain/AppBar.dart';
 import 'package:brain/colors/colors.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,7 +18,6 @@ class CollegeDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        //appBar: AppBar(iconTheme: IconThemeData(color: PrimaryDarkColor), title: Text("Search best colleges", style: TextStyle(color: PrimaryDarkColor, fontFamily: "ProductSans-Bold",)), centerTitle: false, backgroundColor: PrimaryWhiteColor, elevation: 0,),
         body: SingleChildScrollView(child: CollegeDetailsContent()),
       ),
     );

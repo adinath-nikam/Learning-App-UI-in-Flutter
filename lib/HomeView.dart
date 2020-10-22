@@ -8,6 +8,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:brain/CollgeDetailView.dart';
 
+import 'AppBar.dart';
+import 'WorkView.dart';
+
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -25,56 +28,12 @@ class HomeContent extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(20),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Image(
-                      image: AssetImage("assets/images/logo.png"),
-                      height: 60,
-                      width: 60,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          "Brain",
-                          style: TextStyle(
-                              fontFamily: "ProductSans-Bold",
-                              fontSize: 22,
-                              color: PrimaryDarkColor),
-                        ),
-                        Text(
-                          "Everyone Is An Achiever, Accept It!",
-                          style: TextStyle(
-                              fontFamily: "ProductSans-Regular",
-                              fontSize: 12,
-                              color: PrimaryDarkColor),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                GestureDetector(
-                  onTap: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AboutUsView()));
-                  },
-                  child: Icon(
-                    Icons.info,
-                    color: PrimaryDarkColor.withOpacity(0.7),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          CustomAppBar(
+              context: context,
+              MainTitle: "Brain",
+              SubTitle: "Educate to Elevate",
+              Activity: AboutUsView(),
+              ShowClickIcon: true),
           CarouselSlider(
               items: [1, 2, 3, 4, 5].map((i) {
                 return Builder(
@@ -152,18 +111,19 @@ class HomeContent extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     ExploreCards(
-                        ImgUrl:"https://image.freepik.com/free-vector/stack-colorful-books-learning-knowledge-wisdom-illustration-flat-style_120968-95.jpg",
+                        ImgUrl:
+                            "https://image.freepik.com/free-vector/stack-colorful-books-learning-knowledge-wisdom-illustration-flat-style_120968-95.jpg",
                         ActivityName: LibraryView(),
                         context: context,
                         CardWidth: 170,
-                    CardPadding: 0.0),
+                        CardPadding: 0.0),
                     ExploreCards(
                         ImgUrl:
-                        "https://image.freepik.com/free-vector/business-team-competition-achievement-successful-challenge-business-concept-illustration_114835-108.jpg",
+                            "https://image.freepik.com/free-vector/business-team-competition-achievement-successful-challenge-business-concept-illustration_114835-108.jpg",
                         ActivityName: CollegesView(),
                         context: context,
                         CardWidth: 170,
-                    CardPadding: 0.0)
+                        CardPadding: 0.0)
                   ],
                 ),
               ],
@@ -182,8 +142,8 @@ class HomeContent extends StatelessWidget {
                 ),
                 ExploreCards(
                     ImgUrl:
-                        "https://cdn.iconscout.com/icon/premium/png-128-thumb/work-experience-2100868-1762839.png",
-                    ActivityName: CollegesView(),
+                        "https://cdn0.iconfinder.com/data/icons/small-color-v28/512/building_college_elementary_school_university-512.png",
+                    ActivityName: WorkView(),
                     context: context,
                     CardWidth: 60),
                 SizedBox(
@@ -191,8 +151,8 @@ class HomeContent extends StatelessWidget {
                 ),
                 ExploreCards(
                     ImgUrl:
-                        "https://cdn0.iconfinder.com/data/icons/small-color-v28/512/building_college_elementary_school_university-512.png",
-                    ActivityName: CollegeDetailView(),
+                        "https://cdn.iconscout.com/icon/premium/png-128-thumb/work-experience-2100868-1762839.png",
+                    ActivityName: CollegesView(),
                     context: context,
                     CardWidth: 60),
                 SizedBox(
@@ -417,8 +377,7 @@ class HomeContent extends StatelessWidget {
     @required double CardWidth,
     double CardPadding,
   }) {
-    if(CardPadding == null)
-      CardPadding = 10;
+    if (CardPadding == null) CardPadding = 10;
 
     return GestureDetector(
         onTap: () {

@@ -1,3 +1,4 @@
+import 'package:brain/AppBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -18,45 +19,7 @@ class _LibraryViewState extends State<LibraryView>
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100),
-        child: Container(
-          padding: EdgeInsets.all(20),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Image(
-                image: AssetImage("assets/images/logo.png"),
-                height: 60,
-                width: 60,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Brain",
-                    style: TextStyle(
-                        fontFamily: "ProductSans-Bold",
-                        fontSize: 22,
-                        color: PrimaryDarkColor),
-                  ),
-                  Text(
-                    "Library's stuff, read, learn and grow",
-                    style: TextStyle(
-                        fontFamily: "ProductSans-Regular",
-                        fontSize: 12,
-                        color: PrimaryDarkColor),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ),
-      ),
+      appBar: CustomAppBar(context: context, MainTitle: "Brain", SubTitle: "Library's stuff, learn and grow", ShowClickIcon: false),
       body: DefaultTabController(
         length: 3,
         initialIndex: 0,
@@ -83,6 +46,7 @@ class _LibraryViewState extends State<LibraryView>
                           alignment: Alignment.center,
                           child: Text(
                             "Theory",
+                            style: TextStyle(fontFamily: "ProductSans-Bold"),
                           ),
                         ),
                       ),
@@ -99,6 +63,7 @@ class _LibraryViewState extends State<LibraryView>
                           alignment: Alignment.center,
                           child: Text(
                             "Lab",
+                            style: TextStyle(fontFamily: "ProductSans-Bold"),
                           ),
                         ),
                       ),
@@ -115,6 +80,7 @@ class _LibraryViewState extends State<LibraryView>
                           alignment: Alignment.center,
                           child: Text(
                             "QPs",
+                            style: TextStyle(fontFamily: "ProductSans-Bold"),
                           ),
                         ),
                       ),
