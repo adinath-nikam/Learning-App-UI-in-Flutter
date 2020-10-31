@@ -1,4 +1,4 @@
-import 'package:brain/PhoneAuth.dart';
+import 'package:brain/Auth/PhoneAuth.dart';
 import 'package:brain/colors/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

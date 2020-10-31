@@ -2,10 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_particles/draw_particles.dart';
-import 'package:flutter_particles/particle.dart';
-import 'package:flutter_particles/particles.dart';
-import 'package:particles_flutter/particles_flutter.dart';
 
 import 'PhoneAuth.dart';
 

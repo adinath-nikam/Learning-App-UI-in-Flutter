@@ -1,4 +1,5 @@
-import 'package:brain/AppBar.dart';
+import 'file:///C:/Users/Adinath%20Nikam/Desktop/Brain%20-%20Flutter/brain/lib/CustomWidgets/AppBar.dart';
+import 'file:///C:/Users/Adinath%20Nikam/Desktop/Brain%20-%20Flutter/brain/lib/AboutViews/TC&WarningCard.dart';
 import 'package:brain/colors/colors.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
@@ -210,7 +211,8 @@ class CollegeDetailsContent extends StatelessWidget {
                         style: TextStyle(fontFamily: "ProductSans-Bold"),
                       ),
                     ),
-                  )
+                  ),
+                  WarningCard(context),
                 ],
               ))
         ]),

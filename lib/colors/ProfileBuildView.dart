@@ -1,4 +1,4 @@
-import 'package:brain/SelectStreamView.dart';
+import 'package:brain/Auth/SelectStreamView.dart';
 import 'package:brain/colors/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

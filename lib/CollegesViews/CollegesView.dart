@@ -1,11 +1,11 @@
-import 'package:brain/AppBar.dart';
-import 'package:brain/CollgeDetailView.dart';
-import 'package:carousel_slider/carousel_options.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:brain/CustomWidgets/AppBar.dart';
+import 'package:brain/CollegesViews/CollgeDetailView.dart';
+import 'package:brain/CustomWidgets/CustomCarouselSlider.dart';
+import 'package:brain/AboutViews/TC&WarningCard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'colors/colors.dart';
+import '../colors/colors.dart';
 
 class CollegesView extends StatelessWidget {
   @override
@@ -29,41 +29,7 @@ class CollegesList extends StatelessWidget {
               MainTitle: "Brain",
               SubTitle: "Educate to Elevate",
               ShowClickIcon: false),
-          CarouselSlider(
-              items: [1, 2, 3, 4, 5].map((i) {
-                return Builder(
-                  builder: (BuildContext context) {
-                    return Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.symmetric(horizontal: 5.0),
-                        decoration: BoxDecoration(
-                            color: PrimaryDarkColor,
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Center(
-                            child: Text(
-                          '$i',
-                          style: TextStyle(
-                              fontSize: 16.0,
-                              fontFamily: "ProductSans-Bold",
-                              color: PrimaryWhiteColor),
-                        )));
-                  },
-                );
-              }).toList(),
-              options: CarouselOptions(
-                height: 150,
-                aspectRatio: 16 / 9,
-                viewportFraction: 0.8,
-                initialPage: 0,
-                enableInfiniteScroll: true,
-                reverse: false,
-                autoPlay: true,
-                autoPlayInterval: Duration(seconds: 8),
-                autoPlayAnimationDuration: Duration(milliseconds: 1000),
-                autoPlayCurve: Curves.fastOutSlowIn,
-                enlargeCenterPage: true,
-                scrollDirection: Axis.horizontal,
-              )),
+          CustomCarouselSlider(EnlargeCenterCard: true, InfiniteScroll: true),
           Padding(
             padding: const EdgeInsets.all(25.0),
             child: TextFormField(
@@ -113,6 +79,8 @@ class CollegesList extends StatelessWidget {
           CollegeListItem(),
           CollegeListItem(),
           CollegeListItem(),
+          TermsConditions(context),
+          WarningCard(context)
         ],
       ),
     );

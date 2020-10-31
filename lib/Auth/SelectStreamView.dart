@@ -1,7 +1,7 @@
-import 'package:brain/HomeView.dart';
+import 'package:brain/Home/HomeView.dart';
 import 'package:flutter/material.dart';
 
-import 'colors/colors.dart';
+import '../colors/colors.dart';
 
 class SelectStreamView extends StatelessWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'colors/colors.dart';
+import '../colors/colors.dart';
 
 Widget CustomAppBar(
     {@required BuildContext context,
@@ -70,16 +70,6 @@ Widget CustomAppBar(
             }()),
           )
 
-//            GestureDetector(
-//              onTap: () {
-//                Navigator.of(context)
-//                    .push(MaterialPageRoute(builder: (context) => Activity));
-//              },
-//              child: Icon(
-//                Icons.info,
-//                color: PrimaryDarkColor.withOpacity(0.7),
-//              ),
-//            ),
         ],
       ),
     ),

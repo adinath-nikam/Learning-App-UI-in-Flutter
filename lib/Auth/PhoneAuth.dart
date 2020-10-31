@@ -1,9 +1,8 @@
 import 'package:brain/colors/ProfileBuildView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
 
-import 'colors/colors.dart';
+import '../colors/colors.dart';
 
 class PhoneAuth extends StatelessWidget {
   @override

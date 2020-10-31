@@ -1,9 +1,9 @@
-import 'package:brain/AppBar.dart';
+import 'package:brain/CustomWidgets/AppBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-import 'colors/colors.dart';
+import '../colors/colors.dart';
 
 class LibraryView extends StatefulWidget {
   @override
