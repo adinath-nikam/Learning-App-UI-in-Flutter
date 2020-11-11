@@ -1,7 +1,8 @@
+import 'package:brain/NewsViews/NewsView.dart';
 import 'package:brain/colors/colors.dart';
 import 'package:flutter/material.dart';
 
-Widget NewsSection() {
+Widget NewsSection(BuildContext context) {
   return Column(
     children: <Widget>[
       Container(
@@ -10,8 +11,8 @@ Widget NewsSection() {
             elevation: 0,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
-                side:
-                    BorderSide(color: PrimaryDarkColor.withOpacity(0.5), width: 1)),
+                side: BorderSide(
+                    color: PrimaryDarkColor.withOpacity(0.5), width: 1)),
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Row(
@@ -73,13 +74,19 @@ Widget NewsSection() {
               ),
             ),
           )),
-      Text(
-        "View all InSights...",
-        style: TextStyle(
-            fontFamily: "ProductSans-Bold",
-            fontSize: 12,
-            color: Colors.lightBlue),
-        textAlign: TextAlign.center,
+      GestureDetector(
+        onTap: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => NewsView()));
+        },
+        child: Text(
+          "View all InSights...",
+          style: TextStyle(
+              fontFamily: "ProductSans-Bold",
+              fontSize: 12,
+              color: Colors.lightBlue),
+          textAlign: TextAlign.center,
+        ),
       )
     ],
   );

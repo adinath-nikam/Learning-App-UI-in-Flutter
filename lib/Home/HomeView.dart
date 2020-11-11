@@ -1,15 +1,14 @@
 import 'package:brain/AboutViews/AboutUsVIew.dart';
 import 'package:brain/CollegesViews/CollegesView.dart';
-import 'package:brain/CollegesViews/CollgeDetailView.dart';
 import 'package:brain/CustomWidgets/CustomCarouselSlider.dart';
 import 'package:brain/Home/GreetingRow.dart';
 import 'package:brain/LibraryViews/LibraryView.dart';
+import 'package:brain/NewsViews/NewsView.dart';
 import 'package:brain/ScholarshipsViews/ScholarshipsView.dart';
 import 'package:brain/AboutViews/TC&WarningCard.dart';
 import 'package:brain/colors/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../CustomWidgets/AppBar.dart';
 import 'CircularsCards.dart';
 import 'NewsCards.dart';
@@ -103,7 +102,7 @@ class HomeContent extends StatelessWidget {
                 ExploreCards(
                     ImgUrl:
                         "https://cdn.iconscout.com/icon/premium/png-256-thumb/newspaper-1956438-1650643.png",
-                    ActivityName: CollegeDetailView(),
+                    ActivityName: NewsView(),
                     context: context,
                     CardWidth: 60),
                 SizedBox(
@@ -130,7 +129,7 @@ class HomeContent extends StatelessWidget {
           ),
           SideDivider(
               "InSights", "Get Latest Updates and News of Education Industry."),
-          NewsSection(),
+          NewsSection(context),
           SizedBox(
             height: 10,
           ),
