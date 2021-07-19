@@ -21,7 +21,7 @@ Widget WarningCard(BuildContext context){
           Row(
             children: <Widget>[
               Text(
-                "Be Aware!",
+                "Disclaimer",
                 style: TextStyle(
                   fontFamily: "ProductSans-Bold",
                   color: Colors.yellow,
@@ -42,7 +42,7 @@ Widget WarningCard(BuildContext context){
             height: 8,
           ),
           Text(
-            "Warning! Notespedia or anyother third party service with the reference of Notespedia will never call or ask for any extra charges on our service listed in our Terms-of-Services.",
+            "Any Disclaimer Text Here ...",
             style: TextStyle(
               fontFamily: "ProductSans-Regular",
               color: Colors.yellow,

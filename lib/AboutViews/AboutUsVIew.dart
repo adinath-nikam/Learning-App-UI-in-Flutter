@@ -83,13 +83,13 @@ class AboutUsContent extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              TwitterLink("https://twitter.com/CipliOnat"),
-              FacebookLink("https://twitter.com/CipliOnat"),
-              InstagramLink("https://twitter.com/CipliOnat"),
-              WhatsappLink("https://twitter.com/CipliOnat"),
-              YouTubeLink("https://twitter.com/CipliOnat"),
-              LinkedInLink("https://twitter.com/CipliOnat"),
-              GithubLink("https://twitter.com/CipliOnat"),
+              TwitterLink("https://www.instagram.com/adinath_nikam/"),
+              FacebookLink("https://www.instagram.com/adinath_nikam/"),
+              InstagramLink("https://www.instagram.com/adinath_nikam/"),
+              WhatsappLink("https://www.instagram.com/adinath_nikam/"),
+              YouTubeLink("https://www.instagram.com/adinath_nikam/"),
+              LinkedInLink("https://www.instagram.com/adinath_nikam/"),
+              GithubLink("https://www.instagram.com/adinath_nikam/"),
             ],
           ),
 

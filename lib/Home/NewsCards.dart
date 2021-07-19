@@ -25,7 +25,7 @@ Widget NewsSection(BuildContext context) {
                       Container(
                         width: 250, //** Need to Work on It **
                         child: Text(
-                          "News Title aaaaaaaaaaaa aaa aaaaa aaaaaaaaaaaa",
+                          "News Title Here...",
                           style: TextStyle(
                               fontSize: 16, fontFamily: "ProductSans-Bold"),
                           softWrap: true,

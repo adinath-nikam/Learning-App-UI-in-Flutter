@@ -15,7 +15,7 @@ Widget GreetingRow() {
                 radius: 20,
                 backgroundColor: PrimaryWhiteColor,
                 backgroundImage: NetworkImage(
-                    "https://cdn0.iconfinder.com/data/icons/connection/512/icon-6.png"),
+                    "https://img.icons8.com/cotton/2x/gender-neutral-user--v2.png"),
               ),
             ),
             SizedBox(

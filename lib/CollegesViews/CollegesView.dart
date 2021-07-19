@@ -1,3 +1,4 @@
+import 'package:brain/ContestViews/ContestHomeVIew.dart';
 import 'package:brain/CustomWidgets/AppBar.dart';
 import 'package:brain/CollegesViews/CollgeDetailView.dart';
 import 'package:brain/CustomWidgets/CustomCarouselSlider.dart';
@@ -57,11 +58,11 @@ class CollegesList extends StatelessWidget {
               children: <Widget>[
 
 
-                CityItem(context: context, CityName: "Belgaum", ActivityName: CollegeDetailView()),
-                CityItem(context: context, CityName: "Banglore", ActivityName: CollegeDetailView()),
-                CityItem(context: context, CityName: "Mysore", ActivityName: CollegeDetailView()),
-                CityItem(context: context, CityName: "Hubali", ActivityName: CollegeDetailView()),
-                CityItem(context: context, CityName: "Uttar Kannada", ActivityName: CollegeDetailView()),
+                CityItem(context: context, CityName: "Belgaum", ActivityName: ContestHomeView()),
+                CityItem(context: context, CityName: "Banglore", ActivityName: ContestHomeView()),
+                CityItem(context: context, CityName: "Mysore", ActivityName: ContestHomeView()),
+                CityItem(context: context, CityName: "Hubali", ActivityName: ContestHomeView()),
+                CityItem(context: context, CityName: "Uttar Kannada", ActivityName: ContestHomeView()),
 
 
               ],
@@ -75,10 +76,10 @@ class CollegesList extends StatelessWidget {
             style: TextStyle(fontFamily: "ProductSans-Bold", fontSize: 16),
           ),
           SizedBox(height: 10,),
-          CollegeListItem(),
-          CollegeListItem(),
-          CollegeListItem(),
-          CollegeListItem(),
+          CollegeListItem(context,CollegeDetailView()),
+          CollegeListItem(context,CollegeDetailView()),
+          CollegeListItem(context,CollegeDetailView()),
+          CollegeListItem(context,CollegeDetailView()),
           TermsConditions(context),
           WarningCard(context)
         ],
@@ -86,65 +87,71 @@ class CollegesList extends StatelessWidget {
     );
   }
 
-  Widget CollegeListItem() {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-      child: Card(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(2.0),
-            side:
-                BorderSide(width: 1, color: PrimaryDarkColor.withOpacity(0.2))),
-        child: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(2.0),
-                    side: BorderSide(
-                        width: 1, color: PrimaryDarkColor.withOpacity(0.2))),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Image(
-                    width: 60,
-                    image: NetworkImage(
-                      "https://image.flaticon.com/icons/png/128/167/167707.png",
+  Widget CollegeListItem(BuildContext context, Widget ActivityName) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => ActivityName));
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        child: Card(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(2.0),
+              side:
+                  BorderSide(width: 1, color: PrimaryDarkColor.withOpacity(0.2))),
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(2.0),
+                      side: BorderSide(
+                          width: 1, color: PrimaryDarkColor.withOpacity(0.2))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Image(
+                      width: 60,
+                      image: NetworkImage(
+                        "https://image.flaticon.com/icons/png/128/167/167707.png",
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      "College Name",
-                      style: TextStyle(
-                          fontFamily: "ProductSans-Bold", fontSize: 16),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Text(
-                          "Approved by: AICTE",
-                          style: TextStyle(
-                              fontFamily: "ProductSans-Regular", fontSize: 12),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Type: Aided",
-                          style: TextStyle(
-                              fontFamily: "ProductSans-Regular", fontSize: 12),
-                        ),
-                      ],
-                    )
-                  ],
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "College Name",
+                        style: TextStyle(
+                            fontFamily: "ProductSans-Bold", fontSize: 16),
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Text(
+                            "Approved by: AICTE",
+                            style: TextStyle(
+                                fontFamily: "ProductSans-Regular", fontSize: 12),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Type: Aided",
+                            style: TextStyle(
+                                fontFamily: "ProductSans-Regular", fontSize: 12),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

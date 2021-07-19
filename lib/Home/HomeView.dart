@@ -1,5 +1,6 @@
 import 'package:brain/AboutViews/AboutUsVIew.dart';
 import 'package:brain/CollegesViews/CollegesView.dart';
+import 'package:brain/ContestViews/ContestHomeVIew.dart';
 import 'package:brain/CustomWidgets/CustomCarouselSlider.dart';
 import 'package:brain/Home/GreetingRow.dart';
 import 'package:brain/LibraryViews/LibraryView.dart';
@@ -61,8 +62,8 @@ class HomeContent extends StatelessWidget {
                     ExploreCards(
                         ImgUrl:
                             "https://image.freepik.com/free-vector/business-team-competition-achievement-successful-challenge-business-concept-illustration_114835-108.jpg",
-                        ActivityName: CollegesView(),
                         context: context,
+                        ActivityName: ContestHomeView(),
                         CardWidth: 170,
                         CardPadding: 0.0),
                   ],

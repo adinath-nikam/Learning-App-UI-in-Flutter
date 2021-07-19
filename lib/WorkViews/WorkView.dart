@@ -73,7 +73,7 @@ class WorkView extends StatelessWidget {
                 child: TabBarView(
                   children: [
                     SingleChildScrollView(child: WorkViewContent()),
-                    SingleChildScrollView(child: LabView()),
+                    SingleChildScrollView(child: WorkViewContent()),
                   ],
                 ),
               )
@@ -179,7 +179,7 @@ class WorkViewContent extends StatelessWidget {
                 CompaniesCardItem(
                     "https://conferences.recruitingdaily.com/wp-content/uploads/sites/12/2017/06/Microsoft-logo-6.png"),
                 CompaniesCardItem(
-                    "https://lh3.googleusercontent.com/proxy/lGtJQ6Cyz5XbCb67Tq-pO2ZVczdIDeONrdYDMg_oe3MUsQI3_QqjB060IM9cpAdVKJgqlej6nLe8ZwZj5dcS_dPAUPvFmYoMtuD4bqzJElL0NTqGindofQ"),
+                    "https://www.designyourway.net/blog/wp-content/uploads/2018/12/apple-logo-700x368.jpg"),
                 SizedBox(
                   width: 10,
                 ),
