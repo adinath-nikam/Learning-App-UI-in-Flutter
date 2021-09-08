@@ -36,7 +36,7 @@ class HomeContent extends StatelessWidget {
         children: <Widget>[
           CustomAppBar(
               context: context,
-              MainTitle: "Brain",
+              MainTitle: "Notespedia",
               SubTitle: "Educate to Elevate",
               Activity: AboutUsView(),
               ShowClickIcon: true),

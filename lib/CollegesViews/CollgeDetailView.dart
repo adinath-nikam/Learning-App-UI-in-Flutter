@@ -6,12 +6,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 final List<String> imgList = [
-  'https://www.mlbpbgm.com/wp-content/uploads/2016/03/slidenew2-940x310.jpg',
-  'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=368f45b0888aeb0b7b08e3a1084d3ede&auto=format&fit=crop&w=1950&q=80',
-  'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80',
-  'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89719a0d55dd05e2deae4120227e6efc&auto=format&fit=crop&w=1953&q=80',
-  'https://images.unsplash.com/photo-1508704019882-f9cf40e475b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c6e5e3aba713b17aa1fe71ab4f0ae5b&auto=format&fit=crop&w=1352&q=80',
-  'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0c8d632e977f94e5d312d9893258f59&auto=format&fit=crop&w=1355&q=80'
+  'http://klescet.ac.in/wp-content/uploads/2021/05/ColgEntrance.png',
+  'https://storage.googleapis.com/ezap-prod/colleges/5299/kle-dr-m-s-sheshgiri-college-of-engineering-and-technology-campus.jpg',
+  'https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/2131/2018/7/25/KLE-Dr.-MS-Sheshgiri-College-of-Engineering-and-Technology-Belgaum-(14).jpg',
 ];
 
 class CollegeDetailView extends StatelessWidget {
@@ -56,7 +53,7 @@ class CollegeDetailsContent extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Motichand Lengade Bharatesh Polytechnic",
+                    "KLE, DR. M.S Sheshgiri College of Engineering",
                     style: TextStyle(
                         color: PrimaryDarkColor,
                         fontFamily: "ProductSans-Bold",
@@ -107,7 +104,7 @@ class CollegeDetailsContent extends StatelessWidget {
                     height: 15,
                   ),
                   Text(
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    "KLE DR.M S Sheshgiri College of Engineering and Technology, Belagavi belongs to KLE Society, a society which has a legacy of 102 years in the field of Education and is one of the largest education societies in the Asia continent.Established in the year 1979, KLE DR.MSSCET is a Self-financing, Non-Autonomous and an ISO 9001:2015 Certified Institution approved by AICTE, New Delhi and Permanently Affiliated to Visvesvaraya Technological University, Belagavi. All the Seven B. E. Courses (Civil, Mechanical, E & E, E & C, CSE, Chemical and Biomedical Engineering) are accredited by National Board of Accreditation (NBA), New Delhi.",
                     style: TextStyle(
                         fontFamily: "ProductSans-Regular",
                         fontSize: 16,
@@ -120,7 +117,7 @@ class CollegeDetailsContent extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.location_on,
+                        Icons.attach_money,
                         size: 18,
                         color: PrimaryDarkColor.withOpacity(0.5),
                       ),
@@ -142,7 +139,7 @@ class CollegeDetailsContent extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.attach_money,
+                        Icons.location_on,
                         size: 18,
                         color: PrimaryDarkColor.withOpacity(0.5),
                       ),
@@ -172,7 +169,7 @@ class CollegeDetailsContent extends StatelessWidget {
                         width: 5,
                       ),
                       Text(
-                        "college@mail.com",
+                        "kledrmsscet@kle.com",
                         style: TextStyle(
                             fontSize: 14,
                             fontFamily: "ProductSans-Regular",

@@ -28,7 +28,7 @@ class ScholarshipsViewContent extends StatelessWidget {
         children: <Widget>[
           CustomAppBar(
               context: context,
-              MainTitle: "Brain",
+              MainTitle: "Notespedia",
               SubTitle: "Educate to Elevate",
               ShowClickIcon: false),
           CustomCarouselSlider(EnlargeCenterCard: false, InfiniteScroll: false),
@@ -54,9 +54,8 @@ class ScholarshipsViewContent extends StatelessWidget {
               ],
             ),
           ),
-          ScholarshipCardItem(context),
-          ScholarshipCardItem(context),
-          ScholarshipCardItem(context),
+          ScholarshipCardItem(context, "Google Scholarship", "Deadline 31 Dec, 2021","https://e7.pngegg.com/pngimages/543/934/png-clipart-google-app-logo-google-logo-g-suite-google-text-logo.png"),
+          ScholarshipCardItem(context, "Tata Scholarship", "Deadline 1 Nov, 2021","https://listcarbrands.com/wp-content/uploads/2017/10/Tata-Motors-Logo.png"),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Divider(
@@ -86,8 +85,8 @@ class ScholarshipsViewContent extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                ScholarshipCardItem(context),
-                ScholarshipCardItem(context),
+                ScholarshipCardItem(context, "Microsoft Scholarship", "N/A","https://www.eecmyanmar.com/wp-content/uploads/2018/03/Microsoft-Logo-icon-png-Transparent-Background.png"),
+                ScholarshipCardItem(context, "TCS Scholarship", "N/A","https://i2.wp.com/orissadiary.com/wp-content/uploads/2021/03/TCS.jpg?fit=400%2C400&ssl=1"),
                 SizedBox(
                   width: 10,
                 ),
@@ -102,7 +101,7 @@ class ScholarshipsViewContent extends StatelessWidget {
     );
   }
 
-  Widget ScholarshipCardItem(BuildContext context) {
+  Widget ScholarshipCardItem(BuildContext context, String ScholarshipTitle, String ScholarshipDeadline, String ScholarshipImgUrl) {
     return GestureDetector(
       onTap: (){
         Navigator.of(context).push(MaterialPageRoute(builder: (context) => ScholarshipDetailView()));
@@ -127,7 +126,7 @@ class ScholarshipsViewContent extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Scholarship Name",
+                        ScholarshipTitle,
                         style: TextStyle(
                             fontFamily: "ProductSans-Bold",
                             fontSize: 18,
@@ -137,7 +136,7 @@ class ScholarshipsViewContent extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        "Deadline 31, Jan 2020",
+                        ScholarshipDeadline,
                         style: TextStyle(
                             fontFamily: "ProductSans-Regular",
                             fontSize: 14,
@@ -146,7 +145,7 @@ class ScholarshipsViewContent extends StatelessWidget {
                     ],
                   ),
                   Image(
-                    image: AssetImage("assets/images/logo.png"),
+                    image: NetworkImage(ScholarshipImgUrl),
                     height: 80,
                     width: 80,
                   ),

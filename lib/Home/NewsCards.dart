@@ -25,7 +25,7 @@ Widget NewsSection(BuildContext context) {
                       Container(
                         width: 250, //** Need to Work on It **
                         child: Text(
-                          "News Title Here...",
+                          "TALIBAN Caputred Afghanistan's Kabul, Lost Democracy....",
                           style: TextStyle(
                               fontSize: 16, fontFamily: "ProductSans-Bold"),
                           softWrap: true,
@@ -38,7 +38,7 @@ Widget NewsSection(BuildContext context) {
                       ),
                       Container(
                         child: Text(
-                          "10 hours ago",
+                          "15 Aug, 21",
                           style: TextStyle(
                               fontSize: 10,
                               fontFamily: "ProductSans-Bold",
@@ -53,7 +53,7 @@ Widget NewsSection(BuildContext context) {
                         padding: EdgeInsets.all(5),
                         color: PrimaryDarkColor.withOpacity(0.5),
                         child: Text(
-                          "Education",
+                          "World",
                           style: TextStyle(
                               fontSize: 10,
                               fontFamily: "ProductSans-Bold",
@@ -64,11 +64,11 @@ Widget NewsSection(BuildContext context) {
                     ],
                   ),
                   Image(
-                    image: AssetImage(
-                      "assets/images/logo.png",
+                    image: NetworkImage(
+                      "https://cdn.cfr.org/sites/default/files/styles/immersive_image_3_2_desktop_2x/public/image/2020/09/taliban.jpg",
                     ),
-                    height: 65,
-                    width: 65,
+                    height: 85,
+                    width: 85,
                   ),
                 ],
               ),

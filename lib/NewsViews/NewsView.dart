@@ -45,7 +45,7 @@ class NewsContent extends StatelessWidget {
         children: <Widget>[
           CustomAppBar(
               context: context,
-              MainTitle: "Brain",
+              MainTitle: "Notespedia",
               SubTitle: "Educate to Elevate",
               ShowClickIcon: false),
           Padding(
@@ -54,13 +54,13 @@ class NewsContent extends StatelessWidget {
               fit: BoxFit.fitWidth,
               height: 250,
               image: NetworkImage(
-                  "https://images.unsplash.com/photo-1574021528581-1afbc2d551d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"),
+                  "https://image.cnbcfm.com/api/v1/image/106927555-1629028236316-gettyimages-1234688073-AFP_9L67WR.jpeg?v=1629028310&w=929&h=523"),
             ),
           ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 12, vertical: 5),
             child: Text(
-              "News Title",
+              "TALIBAN Captured Kabul, Afghanistan Lost Democracy..",
               style: TextStyle(
                   fontFamily: "ProductSans-Bold",
                   color: PrimaryDarkColor,
@@ -70,7 +70,7 @@ class NewsContent extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             child: Text(
-              "26 Jan, 2020 - 3:05 PM",
+              "15 Aug, 2021 - 3:05 PM",
               style: TextStyle(
                   fontFamily: "ProductSans-Regular",
                   color: PrimaryDarkColor.withOpacity(0.5),
@@ -80,7 +80,8 @@ class NewsContent extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             child: Text(
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+              "he Taliban have taken control of the presidential palace in Kabul after former President Ashraf Ghani fled the country."
+                  "\nThe US defense secretary approved 1,000 more US troops into Afghanistan due to the deteriorating security situation, a defense official tells CNN, for a total of 6,000 US troops that will be in the country soon.\nEarlier today, the US completed the evacuation of its embassy in Afghanistan and took down the American flag at the diplomatic compound.",
               style: TextStyle(
                   fontFamily: "ProductSans-Regular",
                   color: PrimaryDarkColor,

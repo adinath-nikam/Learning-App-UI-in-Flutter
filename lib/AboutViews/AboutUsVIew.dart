@@ -44,7 +44,7 @@ class AboutUsContent extends StatelessWidget {
             width: 80,
           ),
           Text(
-            "Brain",
+            "Notespedia",
             style: TextStyle(
                 fontFamily: "ProductSans-Bold",
                 fontSize: 28,

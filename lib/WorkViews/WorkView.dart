@@ -147,9 +147,8 @@ class WorkViewContent extends StatelessWidget {
           SizedBox(
             height: 15,
           ),
-          InternshipCardItem(context),
-          InternshipCardItem(context),
-          InternshipCardItem(context),
+          InternshipCardItem(context, "Google India Internship", "Duration 6 Months", "Hyderabad, Telangana", "https://e7.pngegg.com/pngimages/543/934/png-clipart-google-app-logo-google-logo-g-suite-google-text-logo.png"),
+          InternshipCardItem(context, "IBM Data Science Internship", "Duration 3 Months", "Banglore, Karnataka", "https://i1.wp.com/animationvisarts.com/wp-content/uploads/2021/01/IBM-Logo-Design-1972-present.png?fit=1000%2C500&ssl=1"),
           SizedBox(
             height: 20,
           ),
@@ -195,7 +194,7 @@ class WorkViewContent extends StatelessWidget {
     );
   }
 
-  Widget InternshipCardItem(BuildContext context) {
+  Widget InternshipCardItem(BuildContext context, String InternshipTitle, String InternshipDuration, String InternshipLocation, String InternshipImgUrl) {
     return GestureDetector(
       onTap: () {
       Navigator.of(context).push(MaterialPageRoute(
@@ -220,7 +219,7 @@ class WorkViewContent extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Internship Name",
+                        InternshipTitle,
                         style: TextStyle(
                             fontFamily: "ProductSans-Bold",
                             fontSize: 18,
@@ -230,7 +229,7 @@ class WorkViewContent extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        "Duration 3 Months",
+                        InternshipDuration,
                         style: TextStyle(
                             fontFamily: "ProductSans-Regular",
                             fontSize: 14,
@@ -248,7 +247,7 @@ class WorkViewContent extends StatelessWidget {
                             size: 18,
                           ),
                           Text(
-                            "Belgaum, KA",
+                            InternshipLocation,
                             style: TextStyle(
                                 fontFamily: "ProductSans-Regular", fontSize: 16),
                           )
@@ -257,7 +256,7 @@ class WorkViewContent extends StatelessWidget {
                     ],
                   ),
                   Image(
-                    image: AssetImage("assets/images/logo.png"),
+                    image: NetworkImage(InternshipImgUrl),
                     height: 80,
                     width: 80,
                   ),

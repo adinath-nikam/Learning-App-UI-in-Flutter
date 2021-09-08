@@ -38,15 +38,15 @@ class WorkDetailViewContent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Image(
-                image: AssetImage("assets/images/logo.png"),
-                height: 120,
-                width: 120,
+                image: NetworkImage("https://opportunitydesk.info/wp-content/uploads/2020/03/Google-Summer-Code-Internship-min.jpg"),
+                height: 220,
+                width: 210,
               ),
               SizedBox(
                 height: 20,
               ),
               Text(
-                "Google Internship",
+                "Google India Internship - 2021",
                 style: TextStyle(
                   fontFamily: "ProductSans-Bold",
                   fontSize: 22,
@@ -108,7 +108,7 @@ class WorkDetailViewContent extends StatelessWidget {
                               width: 5,
                             ),
                             Text(
-                              "Belgaum",
+                              "Hyderabad, Telangana",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   fontFamily: "ProductSans-Regular",
@@ -130,7 +130,7 @@ class WorkDetailViewContent extends StatelessWidget {
                             ),
                             Flexible(
                               child: Text(
-                                "START DATE\n11 March, 2020",
+                                "START DATE\n11 Dec, 2021",
                                 textAlign: TextAlign.center,
                                 overflow: TextOverflow.visible,
                                 style: TextStyle(
@@ -179,7 +179,7 @@ class WorkDetailViewContent extends StatelessWidget {
                               width: 5,
                             ),
                             Text(
-                              "APPLY BY\n31 Dec, 2020",
+                              "APPLY BY\n1 Nov, 2021",
                               overflow: TextOverflow.visible,
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -207,7 +207,7 @@ class WorkDetailViewContent extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "Applications are being invited to apply for the Google Summer Internship 2020. Google Summer Code is an International Paid Internship for international students. This Google Internship is a Free International internship for All over the world students.GSOC is a Free Internship For Bachelors Degree Programs, Masters Degree Programs & PhD Degree Programs students belonging to Any Academic Background.Google Internship 2020 will give you a stipend of 6000USD at the end",
                 style: TextStyle(
                     fontFamily: "ProductSans-Regular",
                     fontSize: 14,
@@ -228,7 +228,7 @@ class WorkDetailViewContent extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
                 style: TextStyle(
                     fontFamily: "ProductSans-Regular",
                     fontSize: 14,
@@ -249,7 +249,7 @@ class WorkDetailViewContent extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "UG Student From any AICTE Approved University/College.",
                 style: TextStyle(
                     fontFamily: "ProductSans-Regular",
                     fontSize: 14,
@@ -294,9 +294,7 @@ class WorkDetailViewContent extends StatelessWidget {
               SizedBox(
                 width: 10,
               ),
-              InternshipCardItem(context),
-              InternshipCardItem(context),
-              InternshipCardItem(context),
+              InternshipCardItem(context, "https://i1.wp.com/animationvisarts.com/wp-content/uploads/2021/01/IBM-Logo-Design-1972-present.png?fit=1000%2C500&ssl=1"),
               SizedBox(
                 width: 2,
               ),
@@ -310,7 +308,7 @@ class WorkDetailViewContent extends StatelessWidget {
     );
   }
 
-  Widget InternshipCardItem(BuildContext context) {
+  Widget InternshipCardItem(BuildContext context, String InternshipImgUrl) {
     return GestureDetector(
       onTap: () {
         Navigator.of(context)
@@ -335,7 +333,7 @@ class WorkDetailViewContent extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Internship Name",
+                        "IBM Data Science",
                         style: TextStyle(
                             fontFamily: "ProductSans-Bold",
                             fontSize: 14,
@@ -363,7 +361,7 @@ class WorkDetailViewContent extends StatelessWidget {
                             size: 12,
                           ),
                           Text(
-                            "Belgaum, KA",
+                            "Banglore, KA",
                             style: TextStyle(
                                 fontFamily: "ProductSans-Regular",
                                 fontSize: 12),
@@ -373,7 +371,7 @@ class WorkDetailViewContent extends StatelessWidget {
                     ],
                   ),
                   Image(
-                    image: AssetImage("assets/images/logo.png"),
+                    image: NetworkImage(InternshipImgUrl),
                     height: 80,
                     width: 80,
                   ),

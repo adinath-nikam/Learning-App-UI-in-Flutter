@@ -19,7 +19,7 @@ class _LibraryViewState extends State<LibraryView>
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      appBar: CustomAppBar(context: context, MainTitle: "Brain", SubTitle: "Library's stuff, learn and grow", ShowClickIcon: false),
+      appBar: CustomAppBar(context: context, MainTitle: "Notespedia", SubTitle: "Library's stuff, learn and grow", ShowClickIcon: false),
       body: DefaultTabController(
         length: 3,
         initialIndex: 0,
@@ -104,7 +104,7 @@ class _LibraryViewState extends State<LibraryView>
   }
 }
 
-Widget BookItem(BuildContext context) {
+Widget BookItem(BuildContext context, String BookTitle, String BookAuthor) {
   return Container(
     padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
     child: Column(
@@ -146,13 +146,13 @@ Widget BookItem(BuildContext context) {
                 children: <Widget>[
                   SizedBox(height: 5,),
                   Text(
-                    "Book Title",
+                    BookTitle,
                     style: TextStyle(fontSize: 16, fontFamily: "ProductSans-Bold", color: PrimaryDarkColor),
                     overflow: TextOverflow.visible,
                   ),
                   SizedBox(height: 5,),
                   Text(
-                    "Book Author",
+                    BookAuthor,
                     style: TextStyle(fontSize: 12, fontFamily: "ProductSans-Regular", color: PrimaryDarkColor.withOpacity(0.7)),
                     overflow: TextOverflow.visible,
                   ),
@@ -185,8 +185,8 @@ class TheoryView extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          BookItem(context),
-          BookItem(context),
+          BookItem(context, "Engineering Mathematics - 3", "Don't Know"),
+          BookItem(context, "Computer Organization", "Don't Know"),
         ],
       ),
     );
@@ -199,10 +199,8 @@ class LabView extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          BookItem(context),
-          BookItem(context),
-          BookItem(context),
-          BookItem(context),
+          BookItem(context, "Data Structure Lab", "Don't Know"),
+          BookItem(context, "Analog and Digital Lab", "Don't Know"),
         ],
       ),
     );
@@ -215,10 +213,8 @@ class QpView extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          BookItem(context),
-          BookItem(context),
-          BookItem(context),
-          BookItem(context),
+          BookItem(context, "EM-3 [Aug-Sep 2020]", "VTU"),
+          BookItem(context, "CO [Apr-May 2020]", "VTU"),
         ],
       ),
     );

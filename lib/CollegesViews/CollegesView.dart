@@ -27,7 +27,7 @@ class CollegesList extends StatelessWidget {
         children: <Widget>[
           CustomAppBar(
               context: context,
-              MainTitle: "Brain",
+              MainTitle: "Notespedia",
               SubTitle: "Educate to Elevate",
               ShowClickIcon: false),
           CustomCarouselSlider(EnlargeCenterCard: true, InfiniteScroll: true),
@@ -76,10 +76,8 @@ class CollegesList extends StatelessWidget {
             style: TextStyle(fontFamily: "ProductSans-Bold", fontSize: 16),
           ),
           SizedBox(height: 10,),
-          CollegeListItem(context,CollegeDetailView()),
-          CollegeListItem(context,CollegeDetailView()),
-          CollegeListItem(context,CollegeDetailView()),
-          CollegeListItem(context,CollegeDetailView()),
+          CollegeListItem(context,CollegeDetailView(), "KLE, MSSCET Belgaum", "Aided"),
+          CollegeListItem(context,CollegeDetailView(), "GIT, Belgaum", "UnAided"),
           TermsConditions(context),
           WarningCard(context)
         ],
@@ -87,7 +85,7 @@ class CollegesList extends StatelessWidget {
     );
   }
 
-  Widget CollegeListItem(BuildContext context, Widget ActivityName) {
+  Widget CollegeListItem(BuildContext context, Widget ActivityName, String CollegeName, String CollegeType) {
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
@@ -126,7 +124,7 @@ class CollegesList extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "College Name",
+                        CollegeName,
                         style: TextStyle(
                             fontFamily: "ProductSans-Bold", fontSize: 16),
                       ),
@@ -141,7 +139,7 @@ class CollegesList extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            "Type: Aided",
+                            CollegeType,
                             style: TextStyle(
                                 fontFamily: "ProductSans-Regular", fontSize: 12),
                           ),

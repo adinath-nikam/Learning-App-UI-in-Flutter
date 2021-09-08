@@ -22,7 +22,7 @@ Widget GreetingRow() {
               width: 10,
             ),
             Text(
-              "Hello, Adinath",
+              "Hello, Student",
               style: TextStyle(
                   fontFamily: "ProductSans-Bold",
                   color: PrimaryDarkColor,
