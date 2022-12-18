@@ -114,15 +114,18 @@ class CircularsViewContent extends StatelessWidget {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: 50,
-                        child: RaisedButton(
+                        child: ElevatedButton(
                           onPressed: () {},
-                          color: PrimaryDarkColor,
-                          textColor: PrimaryWhiteColor,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: PrimaryDarkColor
+
+                          ),
                           child: Text(
                             "View Official Circular",
                             style: TextStyle(
                                 fontSize: 16,
-                                fontFamily: "ProductSans-Regular"),
+                                fontFamily: "ProductSans-Regular",
+                            color: PrimaryWhiteColor),
                             textAlign: TextAlign.justify,
                             softWrap: true,
                           ),

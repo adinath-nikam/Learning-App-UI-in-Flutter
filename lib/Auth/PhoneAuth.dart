@@ -91,18 +91,21 @@ class PhoneAuth extends StatelessWidget {
                         color: PrimaryDarkColor,
                       ),
                     ),
-                    RaisedButton(
+                    ElevatedButton(
                       child: Text(
                         "Get OTP",
                         style: TextStyle(
                           fontSize: 14,
                           fontFamily: "ProductSans-Bold",
+                          color: PrimaryWhiteColor,
                         ),
                       ),
-                      color: PrimaryDarkColor,
-                      textColor: PrimaryWhiteColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: PrimaryDarkColor,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
+
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => ProfileBuidView()));

@@ -197,15 +197,16 @@ class CollegeDetailsContent extends StatelessWidget {
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 55,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {},
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      color: PrimaryDarkColor,
-                      textColor: PrimaryWhiteColor,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: PrimaryDarkColor,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
                       child: Text(
                         "Visit College Website",
-                        style: TextStyle(fontFamily: "ProductSans-Bold"),
+                        style: TextStyle(fontFamily: "ProductSans-Bold", color: PrimaryWhiteColor),
                       ),
                     ),
                   ),

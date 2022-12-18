@@ -57,11 +57,13 @@ class AboutUsContent extends StatelessWidget {
                   fontSize: 14,
                   color: PrimaryDarkColor),
               textAlign: TextAlign.center),
-          SizedBox(height: 15,),
-
+          SizedBox(
+            height: 15,
+          ),
           Padding(
             padding: const EdgeInsets.all(5.0),
-            child: Text('''A Terms and Conditions agreement, also known as a T&C, Terms of Use or Terms of Service, is the legal backbone of the relationship between your mobile app and your users. It sets forth clauses that embody the rules, requirements, restrictions and limitations that a user must agree to in order to use your mobile app.
+            child: Text(
+                '''A Terms and Conditions agreement, also known as a T&C, Terms of Use or Terms of Service, is the legal backbone of the relationship between your mobile app and your users. It sets forth clauses that embody the rules, requirements, restrictions and limitations that a user must agree to in order to use your mobile app.
 
     It's an incredibly important legal agreement for you to have, regardless of which app distribution platform you're using.
 
@@ -72,14 +74,19 @@ class AboutUsContent extends StatelessWidget {
                     color: PrimaryDarkColor.withOpacity(0.7)),
                 textAlign: TextAlign.justify),
           ),
-          Divider(height: 50, thickness: 1,),
+          Divider(
+            height: 50,
+            thickness: 1,
+          ),
           Text("Follow us, We are Everywhere",
               style: TextStyle(
                   fontFamily: "ProductSans-Regular",
                   fontSize: 14,
                   color: PrimaryDarkColor),
               textAlign: TextAlign.center),
-          SizedBox(height: 15,),
+          SizedBox(
+            height: 15,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
@@ -92,66 +99,77 @@ class AboutUsContent extends StatelessWidget {
               GithubLink("https://www.instagram.com/adinath_nikam/"),
             ],
           ),
-
-          SizedBox(height: 30,),
+          SizedBox(
+            height: 30,
+          ),
           AboutUsButtons(context, "Privacy and Policy", PhoneAuth()),
           AboutUsButtons(context, "Terms and Conditions", PhoneAuth()),
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           Text("Proudly ❤ Indian",
               style: TextStyle(
                   fontFamily: "ProductSans-Regular",
                   fontSize: 14,
                   color: PrimaryDarkColor.withOpacity(0.5)),
               textAlign: TextAlign.center),
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );
   }
 
-  Widget TwitterLink(String Url){
+  Widget TwitterLink(String Url) {
     return SocialMediaButton.twitter(
       url: Url,
       size: 30,
       color: Colors.blue,
     );
   }
-  Widget FacebookLink(String Url){
+
+  Widget FacebookLink(String Url) {
     return SocialMediaButton.facebook(
       url: Url,
       size: 30,
       color: Colors.blue,
     );
   }
-  Widget InstagramLink(String Url){
+
+  Widget InstagramLink(String Url) {
     return SocialMediaButton.instagram(
       url: Url,
       size: 30,
       color: Colors.pinkAccent,
     );
   }
-  Widget WhatsappLink(String Url){
+
+  Widget WhatsappLink(String Url) {
     return SocialMediaButton.whatsapp(
       url: Url,
       size: 30,
       color: Colors.green,
     );
   }
-  Widget YouTubeLink(String Url){
+
+  Widget YouTubeLink(String Url) {
     return SocialMediaButton.youtube(
       url: Url,
       size: 30,
       color: Colors.red,
     );
   }
-  Widget GithubLink(String Url){
+
+  Widget GithubLink(String Url) {
     return SocialMediaButton.github(
       url: Url,
       size: 30,
       color: Colors.black,
     );
   }
-  Widget LinkedInLink(String Url){
+
+  Widget LinkedInLink(String Url) {
     return SocialMediaButton.linkedin(
       url: Url,
       size: 30,
@@ -159,26 +177,28 @@ class AboutUsContent extends StatelessWidget {
     );
   }
 
-  Widget AboutUsButtons(BuildContext context, String ButtonText, Widget ActivityName){
+  Widget AboutUsButtons(
+      BuildContext context, String ButtonText, Widget ActivityName) {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: SizedBox(
         height: 55,
-        child: FlatButton(
+        child: ElevatedButton(
           child: Text(
             ButtonText,
             style: TextStyle(
-              fontSize: 18,
-              fontFamily: "ProductSans-Regular",
-            ),
+                fontSize: 18,
+                fontFamily: "ProductSans-Regular",
+                color: PrimaryWhiteColor),
           ),
-          color: PrimaryDarkColor,
-          textColor: PrimaryWhiteColor,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8)),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: PrimaryDarkColor,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          ),
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => ActivityName));
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => ActivityName));
           },
         ),
       ),
